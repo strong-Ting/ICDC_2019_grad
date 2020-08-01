@@ -53,7 +53,11 @@ parameter WRITE_L1 = 4'd7;
 parameter READ_L0_K1 = 4'd8;
 parameter MAX_POOLING_K1 = 4'd9;
 parameter WRITE_L1_K1 = 4'd10;
-parameter FINISH = 4'd11;
+parameter READ_L1_K0 = 4'd11;
+parameter WRITE_L2_K0 = 4'd12;
+parameter READ_L1_K1 = 4'd13;
+parameter WRITE_L2_K1 = 4'd14;
+parameter FINISH = 4'd15;
 
 //kernel 0
 parameter K0_0 = 20'h0A89E ;
@@ -130,7 +134,7 @@ begin
         if(index_X == 6'd63) index_X <= 6'd0;
         else index_X <= index_X + 6'd1;
     end
-    else if(current_State == WRITE_L1 || current_State == WRITE_L1_K1)
+    else if(current_State == WRITE_L1 || current_State == WRITE_L1_K1 || current_State == WRITE_L2_K0 || current_State == WRITE_L2_K1)
     begin
         if(index_X == 6'd62) index_X <= 6'd0;
         else index_X <= index_X + 6'd2;
@@ -144,7 +148,7 @@ begin
     begin
         if(index_X == 6'd63) index_Y <= index_Y + 6'd1;
     end
-    else if(current_State == WRITE_L1 || current_State == WRITE_L1_K1)
+    else if(current_State == WRITE_L1 || current_State == WRITE_L1_K1 || current_State == WRITE_L2_K0 || current_State == WRITE_L2_K1)
     begin
         if(index_X == 6'd62) index_Y <= index_Y + 6'd2;
     end
@@ -206,11 +210,31 @@ begin
                 else next_State = READ_L0_K1;
             end
         MAX_POOLING_K1:
-            next_State = WRITE_L1_K1;
+            begin
+                next_State = WRITE_L1_K1;
+            end
         WRITE_L1_K1:
             begin
-                if(index_X == 6'd62 && index_Y == 6'd62) next_State = FINISH;
+                if(index_X == 6'd62 && index_Y == 6'd62) next_State = READ_L1_K0;
                 else next_State = READ_L0_K1;
+            end
+        READ_L1_K0:
+            begin
+                next_State = WRITE_L2_K0;
+            end
+        WRITE_L2_K0:
+            begin
+                if(index_X == 6'd62 && index_Y == 6'd62) next_State = READ_L1_K1;
+                else next_State = READ_L1_K0;
+            end
+        READ_L1_K1:
+            begin
+                next_State = WRITE_L2_K1;
+            end
+        WRITE_L2_K1:
+            begin
+                if(index_X == 6'd62 && index_Y == 6'd62) next_State = FINISH;
+                else next_State = READ_L1_K1;
             end
         FINISH: 
             begin
@@ -245,6 +269,7 @@ always@(posedge clk or posedge reset)
 begin
     if(reset) cwr <= 1'd0;
     else if(current_State == WRITE_L0 || current_State == WRITE_L0_K1) cwr <= 1'd1;
+    else if(current_State == WRITE_L2_K0 || current_State == WRITE_L2_K1) cwr <= 1'd1;
     else if(next_State == WRITE_L1 || next_State == WRITE_L1_K1) cwr <= 1'd1;
     else cwr <= 1'd0; //need to modify
 end
@@ -253,6 +278,7 @@ always@(posedge clk or posedge reset)
 begin
     if(reset) crd <= 1'd0;
     else if(current_State == READ_L0 || current_State == READ_L0_K1) crd <= 1'd1;
+    else if(current_State == READ_L1_K0 || current_State == READ_L1_K1) crd <= 1'd1;
     else crd<= 1'd0;
 end
 
@@ -261,6 +287,9 @@ begin
     if(reset) csel <=3'd0;
     else if(next_State == WRITE_L1) csel <= 3'b011;
     else if(next_State == WRITE_L1_K1) csel <= 3'b100;
+    else if(current_State == READ_L1_K0) csel <= 3'b011;
+    else if(current_State == READ_L1_K1) csel <= 3'b100;
+    else if(current_State == WRITE_L2_K0 || current_State == WRITE_L2_K1) csel <= 3'b101;
     else if(current_State == WRITE_L0) csel <= 3'b001;
     else if(current_State == WRITE_L0_K1) csel <= 3'b010;
     else if(current_State == READ_L0) csel <= 3'b001; 
@@ -270,12 +299,7 @@ end
 //addr
 always@(posedge clk or posedge reset)
 begin
-    if(reset) 
-    begin
-         iaddr <= 6'd0; 
-         caddr_rd <= 6'd0; 
-         caddr_wr <= 6'd0;
-    end
+    if(reset)  iaddr <= 12'd0; 
     else if(current_State == READ_CONV || current_State == READ_CONV_K1)
     begin
         case(counterRead)
@@ -291,6 +315,8 @@ begin
         default: iaddr <= 6'd0;
         endcase
     end
+
+    if(reset) caddr_rd <= 12'd0;
     else if(current_State == READ_L0 || current_State == READ_L0_K1)
     begin
         case(counterRead)
@@ -301,8 +327,13 @@ begin
         default: caddr_rd <= 6'd0;
         endcase
     end
+    else if(current_State == READ_L1_K0 || current_State == READ_L1_K1) caddr_rd <= {index_Y[5:1],index_X[5:1]};
+
+    if(reset) caddr_wr <= 12'd0;
     else if(current_State == WRITE_L0 || current_State == WRITE_L0_K1) caddr_wr <= {index_Y,index_X};
-    else if(next_State == WRITE_L1 || next_State == WRITE_L1_K1) caddr_wr <= {index_Y[5:1],index_X[5:1]} ;
+    else if(next_State == WRITE_L1 || next_State == WRITE_L1_K1) caddr_wr <= {index_Y[5:1],index_X[5:1]};
+    else if(current_State == WRITE_L2_K0) caddr_wr <= ({index_Y[5:1],index_X[5:1]}<<1'd1) ;
+    else if(current_State == WRITE_L2_K1) caddr_wr <= ({index_Y[5:1],index_X[5:1]}<<1'd1) +1'd1;
 end
 
 //cdata_wr
@@ -322,6 +353,10 @@ begin
             if(cdata_rd > cdata_wr) cdata_wr <= cdata_rd;
             else cdata_wr <= cdata_wr;
         end
+    end
+    else if(current_State == WRITE_L2_K0 || current_State == WRITE_L2_K1)
+    begin
+        cdata_wr <= cdata_rd;
     end
 end
 wire signed [43:0] mulTemp;
