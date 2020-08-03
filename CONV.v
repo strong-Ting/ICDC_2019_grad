@@ -88,15 +88,15 @@ begin
     if(current_State == READ_CONV)
     begin
          case(counterRead)
-        4'd1: kernelTemp = K0_0;
-        4'd2: kernelTemp = K0_1;
-        4'd3: kernelTemp = K0_2;
-        4'd4: kernelTemp = K0_3;
-        4'd5: kernelTemp = K0_4;
-        4'd6: kernelTemp = K0_5;
-        4'd7: kernelTemp = K0_6;
-        4'd8: kernelTemp = K0_7;
-        4'd9: kernelTemp = K0_8;
+        4'd2: kernelTemp = K0_0;
+        4'd3: kernelTemp = K0_1;
+        4'd4: kernelTemp = K0_2;
+        4'd5: kernelTemp = K0_3;
+        4'd6: kernelTemp = K0_4;
+        4'd7: kernelTemp = K0_5;
+        4'd8: kernelTemp = K0_6;
+        4'd9: kernelTemp = K0_7;
+        4'd10: kernelTemp = K0_8;
         default: kernelTemp = 20'd0;
         endcase
         BiasTemp = Bias_0;
@@ -104,15 +104,15 @@ begin
     else
     begin
         case(counterRead)
-        4'd1: kernelTemp = K1_0;
-        4'd2: kernelTemp = K1_1;
-        4'd3: kernelTemp = K1_2;
-        4'd4: kernelTemp = K1_3;
-        4'd5: kernelTemp = K1_4;
-        4'd6: kernelTemp = K1_5;
-        4'd7: kernelTemp = K1_6;
-        4'd8: kernelTemp = K1_7;
-        4'd9: kernelTemp = K1_8;
+        4'd2: kernelTemp = K1_0;
+        4'd3: kernelTemp = K1_1;
+        4'd4: kernelTemp = K1_2;
+        4'd5: kernelTemp = K1_3;
+        4'd6: kernelTemp = K1_4;
+        4'd7: kernelTemp = K1_5;
+        4'd8: kernelTemp = K1_6;
+        4'd9: kernelTemp = K1_7;
+        4'd10: kernelTemp = K1_8;
         default: kernelTemp = 20'd0;
         endcase
         BiasTemp = Bias_1;
@@ -172,7 +172,7 @@ begin
             end
         READ_CONV:
             begin
-                if(counterRead == 4'd10) next_State = WRITE_L0;
+                if(counterRead == 4'd11) next_State = WRITE_L0;
                 else next_State = READ_CONV;
             end
         WRITE_L0:
@@ -182,7 +182,7 @@ begin
             end
         READ_CONV_K1:
             begin
-                if(counterRead == 4'd10) next_State = WRITE_L0_K1;
+                if(counterRead == 4'd11) next_State = WRITE_L0_K1;
                 else next_State = READ_CONV_K1;
             end
         WRITE_L0_K1:
@@ -251,7 +251,7 @@ end
 always@(posedge clk or posedge reset)
 begin
     if(reset) counterRead <= 4'd0;
-    else if(counterRead == 4'd10) counterRead <= 4'd0;
+    else if(counterRead == 4'd11) counterRead <= 4'd0;
     else if(counterRead == 4'd4 && (current_State == READ_L0 ||current_State == READ_L0_K1) ) counterRead <= 4'd0;
     else if(current_State == READ_CONV || current_State == READ_CONV_K1 || current_State == READ_L0 || current_State == READ_L0_K1) counterRead <= counterRead + 4'd1;
 end
@@ -359,26 +359,31 @@ begin
         cdata_wr <= cdata_rd;
     end
 end
+
+reg signed [19:0] idataTemp;
 wire signed [43:0] mulTemp;
-assign mulTemp = kernelTemp * idata;
+assign mulTemp = kernelTemp * idataTemp;
 //conv && bias
 always@(posedge clk or posedge reset)
 begin
     if(reset) convTemp <= 44'd0; 
     else if(current_State == READ_CONV || current_State == READ_CONV_K1)
     begin
+        idataTemp <= idata;
         case(counterRead)
+        
         4'd0:   convTemp <= 44'd0;
-        4'd1:   if(|index_X & |index_Y)  convTemp <= mulTemp;
-        4'd2:   if(|index_Y) convTemp <= convTemp + mulTemp;
-        4'd3:   if((|index_Y)&(~&index_X)) convTemp <= convTemp + mulTemp;
-        4'd4:   if(index_X) convTemp <= convTemp + mulTemp;
-        4'd5:   convTemp <= convTemp + mulTemp;
-        4'd6:   if(~&index_X) convTemp <= convTemp + mulTemp;
-        4'd7:   if((|index_X)&(~&index_Y)) convTemp <= convTemp + mulTemp;
-        4'd8:   if(~&index_Y) convTemp <= convTemp + mulTemp;
-        4'd9:   if(~&index_Y & ~&index_X) convTemp <= convTemp + mulTemp;
-        4'd10:  convTemp <= convTemp + {BiasTemp,16'd0};
+        4'd2:   if(index_X != 6'd0 && index_Y != 6'd0)  convTemp <= mulTemp;
+        4'd3:   if(index_Y != 6'd0) convTemp <= convTemp + mulTemp;
+        4'd4:   if(index_Y != 6'd0 && index_X != 6'd63) convTemp <= convTemp + mulTemp;
+        4'd5:   if(index_X != 6'd0) convTemp <= convTemp + mulTemp;
+        4'd6:   convTemp <= convTemp + mulTemp;
+        4'd7:   if(index_X != 6'd63) convTemp <= convTemp + mulTemp;
+        4'd8:   if(index_X != 6'd0 && index_Y != 6'd63) convTemp <= convTemp + mulTemp;
+        4'd9:   if(index_Y != 6'd63) convTemp <= convTemp + mulTemp;
+        4'd10:   if(index_Y != 6'd63 && index_X != 6'd63) convTemp <= convTemp + mulTemp;
+        4'd11:  convTemp <= convTemp + {BiasTemp,16'd0};
+
         endcase
     end
 end
