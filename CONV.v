@@ -316,6 +316,12 @@ begin
         endcase
     end
 
+    
+   
+end
+
+always@(posedge clk or posedge reset)
+begin
     if(reset) caddr_rd <= 12'd0;
     else if(current_State == READ_L0 || current_State == READ_L0_K1)
     begin
@@ -329,6 +335,10 @@ begin
     end
     else if(current_State == READ_L1_K0 || current_State == READ_L1_K1) caddr_rd <= {index_Y[5:1],index_X[5:1]};
 
+end
+
+always@(posedge clk or posedge reset)
+begin
     if(reset) caddr_wr <= 12'd0;
     else if(current_State == WRITE_L0 || current_State == WRITE_L0_K1) caddr_wr <= {index_Y,index_X};
     else if(next_State == WRITE_L1 || next_State == WRITE_L1_K1) caddr_wr <= {index_Y[5:1],index_X[5:1]};

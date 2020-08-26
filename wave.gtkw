@@ -1,0 +1,29 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Sat Aug 01 10:05:27 2020
+[*]
+[dumpfile] "C:\Users\lin\Desktop\CIC_my\CIC_2019_grad\wave.vcd"
+[dumpfile_mtime] "Sat Aug 01 10:02:13 2020"
+[dumpfile_size] 25597986
+[savefile] "C:\Users\lin\Desktop\CIC_my\CIC_2019_grad\wave.gtkw"
+[timestart] 1126214000
+[size] 1920 1017
+[pos] -35 -35
+*-15.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testfixture.
+[sst_width] 197
+[signals_width] 174
+[sst_expanded] 1
+[sst_vpaned_height] 300
+@28
+testfixture.clk
+@25
+testfixture.u_CONV.current_State[3:0]
+@22
+testfixture.u_CONV.next_State[3:0]
+testfixture.u_CONV.caddr_rd[11:0]
+testfixture.u_CONV.cdata_rd[19:0]
+testfixture.u_CONV.caddr_wr[11:0]
+testfixture.u_CONV.cdata_wr[19:0]
+[pattern_trace] 1
+[pattern_trace] 0
