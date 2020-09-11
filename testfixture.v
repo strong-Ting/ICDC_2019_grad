@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
 `define CYCLE      10.0          	  // Modify your clock period here
-`define SDFFILE    "./syn/CONV_syn.sdf"	  // Modify your sdf file name
+`define SDFFILE    "./CONV_syn.sdf"	  // Modify your sdf file name
 `define End_CYCLE  100000000              // Modify cycle times once your design need more cycle times!
 
 `define PAT        "./dat_grad/cnn_sti.dat"                 // Modify your "dat" directory path
