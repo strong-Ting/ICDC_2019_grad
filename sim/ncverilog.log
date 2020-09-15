@@ -1,0 +1,45 @@
+ncverilog: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.20-s039: Started on Sep 15, 2020 at 11:11:15 CST
+ncverilog
+	testfixture.v
+	../syn/CONV_syn.v
+	-v
+	tsmc13_neg.v
+	+define+SDF
+Loading snapshot worklib.testfixture:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+ncsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./testfixture.v, line = 82, pos = 9
+           Scope: testfixture
+            Time: 0 FS + 0
+
+-----------------------------------------------------
+
+START!!! Simulation Start .....
+
+-----------------------------------------------------
+
+Layer 0 (Convolutional Output) with Kernel 0 is correct !
+Layer 0 (Convolutional Output) with Kernel 1 is correct!
+Layer 1 (Max-pooling Output) with Kernel 0 is correct!
+Layer 1 (Max-pooling Output) with Kernel 1 is correct!
+Layer 2 (Flatten  Output) is correct!
+ 
+-----------------------------------------------------
+
+--------------------- S U M M A R Y -----------------
+
+Congratulations! Layer 0 data have been generated successfully! The result is PASS!!
+
+Congratulations! Layer 1 data have been generated successfully! The result is PASS!!
+
+Congratulations! Layer 2 data have been generated successfully! The result is PASS!!
+
+-----------------------------------------------------
+
+Simulation complete via $finish(1) at time 1249341138 PS + 0
+./testfixture.v:269       #(`CYCLE/2); $finish;
+ncsim> exit
+TOOL:	ncverilog	15.20-s039: Exiting on Sep 15, 2020 at 11:11:47 CST  (total: 00:00:32)

@@ -1,3 +1,0 @@
-1599376834 /home/M10912039/GitHub/CIC_2019_grad/testfixture.v
-1599374074 /home/M10912039/GitHub/CIC_2019_grad/CONV.v
-1599376500 /home/M10912039/GitHub/CIC_2019_grad/CONV_syn.v
