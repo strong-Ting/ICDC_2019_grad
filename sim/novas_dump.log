@@ -45,7 +45,7 @@ PIPE_LOGGING=true
 PWD=/home/lin/github/CIC_2019_grad/sim
 SHELL=/bin/bash
 SHLIB_PATH=/usr/cad/synopsys/verdi/cur/etc/lib/libstdc++/LINUX64/
-SHLVL=8
+SHLVL=9
 SYNTHESIS=/usr/cad/synopsys/synthesis/cur
 SYN_MAN_DIR=/usr/cad/synopsys/synthesis/cur/doc/syn/man
 TERM=xterm-256color
@@ -75,9 +75,9 @@ argv[3]=-v
 argv[4]=tsmc13_neg.v
 argv[5]=+define+SDF
 76 profile - 100
-          CPU/Mem usage: 0.130 sys,  0.130 user,  62.43M sys,  0.00M vm
+          CPU/Mem usage: 0.060 sys,  0.040 user,  62.43M sys,  0.00M vm
 77 VC callback profile - scalar:0 vector:0
-78 Tue Sep 15 11:11:20 2020
+78 Tue Sep 15 12:21:59 2020
 79 pliAppInit
 80 FSDB_GATE is disabled.
 81 Enable Parallel Dumping.

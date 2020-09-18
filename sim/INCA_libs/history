@@ -13,3 +13,4 @@ s8::(14Sep2020:15:11:02):( ncverilog testfixture.v ../syn/CONV_syn.v -v tsmc13_n
 s9::(14Sep2020:15:14:09):( ncverilog testfixture.v ../syn/CONV_syn.v -v tsmc13_neg.v +define+SDF )
 s10::(14Sep2020:15:14:34):( ncverilog testfixture.v ../syn/CONV_syn.v -v tsmc13_neg.v +define+SDF )
 s11::(15Sep2020:11:11:15):( ncverilog testfixture.v ../syn/CONV_syn.v -v tsmc13_neg.v +define+SDF )
+s12::(15Sep2020:12:21:53):( ncverilog testfixture.v ../syn/CONV_syn.v -v tsmc13_neg.v +define+SDF )
