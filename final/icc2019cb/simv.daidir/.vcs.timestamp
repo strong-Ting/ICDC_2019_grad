@@ -1,0 +1,83 @@
+0 
+25
+-Mamsrun=
+-Masflags=--32
+-Mcc=gcc
+-Mcfl= -pipe -m32 -O -I/usr/cad/synopsys/vcs/cur/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -m32 -m32 -rdynamic
+-Mobjects= /usr/cad/synopsys/vcs/cur/linux/lib/libvirsim.so /usr/cad/synopsys/vcs/cur/linux/lib/liberrorinf.so /usr/cad/synopsys/vcs/cur/linux/lib/libsnpsmalloc.so /usr/cad/synopsys/vcs/cur/linux/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/usr/cad/synopsys/vcs/cur/linux/lib/vcs_save_restore_new.o
+-Msyslibs=/usr/cad/synopsys/verdi/cur//share/PLI/VCS/LINUX/pli.a /usr/cad/synopsys/vcs/cur/linux/lib/ctype-stubs_32.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -m32 -I/usr/cad/synopsys/vcs/cur/include
+-P
+-Xvcs_run_simv=1
+-fsdb
+-gen_obj
+-picarchive
+/usr/cad/synopsys/vcs/cur/linux/bin/vcs1
+/usr/cad/synopsys/verdi/cur//share/PLI/VCS/LINUX/verdi.tab
+IOTDF.v
+testfixture.v
+43
+sysc_uni_pwd=/home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb
+XLOCALEDIR=/usr/cad/synopsys/icc2/cur/etc/locale
+XDG_SESSION_ID=2
+XDG_RUNTIME_DIR=/run/user/1001
+XDG_DATA_DIRS=/home/DICS_LAB/M10912039/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+VSCODE_IPC_HOOK_CLI=/run/user/1001/vscode-ipc-d658cb95-4cfd-4ba2-9c82-b51678522ee7.sock
+VSCODE_GIT_IPC_HANDLE=/run/user/1001/vscode-git-71d9f5aa0c.sock
+VSCODE_GIT_ASKPASS_NODE=/home/DICS_LAB/M10912039/.vscode-server/bin/622cb03f7e070a9670c94bae1a45d78d7181fbd4/node
+VSCODE_GIT_ASKPASS_MAIN=/home/DICS_LAB/M10912039/.vscode-server/bin/622cb03f7e070a9670c94bae1a45d78d7181fbd4/extensions/git/dist/askpass-main.js
+VMR_MODE_FLAG=32
+VERDI_HOME=/usr/cad/synopsys/verdi/cur/
+VENDOR=unknown
+VCS_HOME=/usr/cad/synopsys/vcs/cur/
+VCS_DEPTH=0
+VCS_CC=gcc
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux
+VCS_AMD_PURE32=1
+UNAME=/bin/uname
+TOOL_HOME=/usr/cad/synopsys/vcs/cur/linux
+TERM_PROGRAM_VERSION=1.53.2
+TERM_PROGRAM=vscode
+SYN_MAN_DIR=/usr/cad/synopsys/synthesis/cur/doc/syn/man
+SYNTHESIS=/usr/cad/synopsys/synthesis/cur
+SYNOPSYS_synplify=/usr/cad/synopsys/synplify/cur
+SYNOPSYS_identify=/usr/cad/synopsys/identify/cur
+SYNOPSYS=/usr/cad/synopsys/icc/cur
+SSH_CONNECTION=140.125.44.75 59065 140.125.44.63 22
+SSH_CLIENT=140.125.44.75 59065 22
+SHLIB_PATH=/usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX
+SG_HTML_BROWSER=/usr/bin/mozilla
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+PRIMETIME=/usr/cad/synopsys/primetime/cur
+OVA_UUM=0
+OSTYPE=linux
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+HOSTTYPE=x86_64-linux
+HISTCONTROL=ignoredups
+GROUP=M10912039
+GIT_ASKPASS=/home/DICS_LAB/M10912039/.vscode-server/bin/622cb03f7e070a9670c94bae1a45d78d7181fbd4/extensions/git/dist/askpass.sh
+COLORTERM=truecolor
+0
+3
+1615038994 IOTDF.v
+1615038175 testfixture.v
+1605799580 /usr/cad/synopsys/verdi/cur//share/PLI/VCS/LINUX/verdi.tab
+4
+1535686105 /usr/cad/synopsys/vcs/cur/linux/lib/libvirsim.so
+1535685624 /usr/cad/synopsys/vcs/cur/linux/lib/liberrorinf.so
+1535685580 /usr/cad/synopsys/vcs/cur/linux/lib/libsnpsmalloc.so
+1535685860 /usr/cad/synopsys/vcs/cur/linux/lib/libvfs.so
+1615039068 simv.daidir
+-1 partitionlib

@@ -1,0 +1,94 @@
+Magic 271485
+Revision Verdi_R-2020.12
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 1344 647 168 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F1.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 127857.208621 131691.725862
+cursor 131500.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 17
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+aliasmapname IOTDF.cs
+nalias PROCESS		3'b010		NULL
+nalias OUT		3'b011		NULL
+nalias IDLE		3'b000		NULL
+nalias RECV		3'b001		NULL
+
+addGroup "G1"
+activeDirFile "" "/home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F1.fsdb"
+addSignal -h 15 /test/u_IOTDF/clk
+addSignal -h 15 -holdScope rst
+addSignal -h 15 -holdScope fn_sel[2:0]
+addSignal -h 15 -holdScope busy
+addSignal -h 15 -holdScope valid
+aliasname IOTDF.cs
+addSignal -h 15 -UNSIGNED -HEX -holdScope cs[2:0]
+aliasname IOTDF.cs
+addSignal -h 15 -UNSIGNED -HEX -holdScope ns[2:0]
+addSignal -h 15 -holdScope in_en
+addSignal -h 15 -holdScope iot_in[7:0]
+addSignal -h 15 -holdScope iot_in_0[0:15]
+addSignal -h 15 -holdScope iot_in_1[0:15]
+addSignal -h 15 -holdScope done
+addGroup "G2"
+addSignal -h 15 /test/u_IOTDF/cnt_round[2:0]
+addSignal -h 15 -holdScope cnt_record[3:0]
+addSignal -h 15 -holdScope iot_out[127:0]
+addSignal -h 15 -holdScope iot_out_reg[0:15]
+addGroup "G3"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F1.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/test"
+"/test/u_IOTDF"
+
+SCOPE_LIST_BEGIN
+"/test"
+"/test/u_IOTDF"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

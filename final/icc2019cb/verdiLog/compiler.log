@@ -1,0 +1,10 @@
+*design* DebussyLib (btIdent Verdi_R-2020.12)
+Command arguments:
+    +define+verilog
+    testfixture.v
+    IOTDF.v
+
+Highest level modules:
+test
+
+Total	0 error(s),   0 warning(s)
