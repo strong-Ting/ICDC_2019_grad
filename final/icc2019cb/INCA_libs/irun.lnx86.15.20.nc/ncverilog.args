@@ -3,6 +3,8 @@
 // Do not modify this file
 //
 testfixture.v
-IOTDF.v
-+define+F2
+IOTDF_syn.v
+-v
+/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v
++define+F2+SDF
 +access+r

@@ -96,3 +96,7 @@ s95(06Mar2021:23:59:15):  ncverilog testfixture.v IOTDF.v +define+F2 +access+r
 s96(06Mar2021:23:59:25):  ncverilog testfixture.v IOTDF.v +define+F1 +access+r 
 s97(07Mar2021:00:02:10):  ncverilog testfixture.v IOTDF.v +define+F1 +access+r 
 s98(07Mar2021:00:02:38):  ncverilog testfixture.v IOTDF.v +define+F2 +access+r 
+s99(07Mar2021:00:19:32):  ncverilog testfixture.v IOTDF.v +define+F2 +access+r 
+s100(07Mar2021:00:19:42):  ncverilog testfixture.v IOTDF.v +define+F1 +access+r 
+s101(07Mar2021:00:20:47):  ncverilog testfixture.v IOTDF_syn.v -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v +define+F1+SDF +access+r 
+s102(07Mar2021:00:20:59):  ncverilog testfixture.v IOTDF_syn.v -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v +define+F2+SDF +access+r 

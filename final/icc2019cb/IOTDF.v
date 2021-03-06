@@ -78,8 +78,8 @@ always@(posedge clk or posedge rst) begin
         for(i=0;i<16;i=i+1) begin
             iot_in_0[i] <= 8'd0;
             iot_in_1[i] <= 8'd0;
+            iot_out_reg[i] <= 8'd0;
         end
-        iot_out <= 128'd0;
         cmp_flag <= 1'd0;
         even_flag <= 1'd0;
     end
