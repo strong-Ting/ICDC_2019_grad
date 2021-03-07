@@ -2,7 +2,7 @@
 // File created by:  ncverilog
 // Do not modify this file
 //
-+define+F2+SDF
++define+F5
 +access+r
 -noshowtop
 -ACCESS

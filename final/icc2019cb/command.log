@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version P-2019.03 for linux64 -- Feb 27, 2019
-#@ # Date:   Sun Mar  7 00:16:53 2021
+#@ # Date:   Sun Mar  7 16:19:15 2021
 #@ # Run by: M10912039@dics03.ee.yuntech.edu.tw
 #@ 
 
@@ -6749,115 +6749,5 @@ source -echo -verbose /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb
 #@ report_qor   >  IOTDF_syn.qor
 #@ 
 #@ # -- End source /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/DC_syn.tcl
-
-source DC_syn.tcl
-#@ # -- Starting source DC_syn.tcl
-
-#@ #Read All Files
-#@ read_verilog ./IOTDF.v
-#@ current_design IOTDF
-#@ link
-#@ 
-#@ #Setting Clock Constraints
-#@ source -echo -verbose IOTDF_DC.sdc
-#@ # -- Starting source IOTDF_DC.sdc
-
-#@ # operating conditions and boundary conditions #
-#@ 
-#@ 
-#@ create_clock -name clk  -period 10.0   [get_ports  clk]      ;#Modify period by yourself
-#@ 
-#@ set_dont_touch_network      [all_clocks]
-#@ set_fix_hold                [all_clocks]
-#@ set_clock_uncertainty  0.1  [all_clocks]
-#@ set_clock_latency      1.0  [all_clocks]
-#@ set_ideal_network           [get_ports clk]
-#@ 
-#@ 
-#@ #Don't touch the basic env setting as below
-#@ set_input_delay  -max 1.0   -clock clk [remove_from_collection [all_inputs]  {clk}]  
-#@ set_input_delay  -min 0.0   -clock clk [remove_from_collection [all_inputs]  {clk}] 
-#@ 
-#@ set_output_delay -max 1.0   -clock clk [all_outputs]
-#@ set_output_delay -min 0.0   -clock clk [all_outputs] 
-#@ 
-#@ set_load         0.01  [all_outputs]
-#@ set_drive        0.1   [all_inputs]
-#@ 
-#@ set_operating_conditions -max_library slow -max slow
-#@ 
-#@ set_max_fanout 10 [all_inputs]
-#@ 
-#@ 
-#@ # -- End source IOTDF_DC.sdc
-
-#@ 
-#@ #Synthesis all design
-#@ compile -map_effort high -area_effort high
-#@ compile -map_effort high -area_effort high -inc
-#@ 
-#@ write -format ddc     -hierarchy -output "IOTDF_syn.ddc"
-#@ write_sdf IOTDF_syn.sdf
-#@ write_file -format verilog -hierarchy -output IOTDF_syn.v
-#@ report_area > area.log
-#@ report_timing > timing.log
-#@ report_qor   >  IOTDF_syn.qor
-#@ 
-#@ # -- End source DC_syn.tcl
-
-source DC_syn.tcl
-#@ # -- Starting source DC_syn.tcl
-
-#@ #Read All Files
-#@ read_verilog ./IOTDF.v
-#@ current_design IOTDF
-#@ link
-#@ 
-#@ #Setting Clock Constraints
-#@ source -echo -verbose IOTDF_DC.sdc
-#@ # -- Starting source IOTDF_DC.sdc
-
-#@ # operating conditions and boundary conditions #
-#@ 
-#@ 
-#@ create_clock -name clk  -period 10.0   [get_ports  clk]      ;#Modify period by yourself
-#@ 
-#@ set_dont_touch_network      [all_clocks]
-#@ set_fix_hold                [all_clocks]
-#@ set_clock_uncertainty  0.1  [all_clocks]
-#@ set_clock_latency      1.0  [all_clocks]
-#@ set_ideal_network           [get_ports clk]
-#@ 
-#@ 
-#@ #Don't touch the basic env setting as below
-#@ set_input_delay  -max 1.0   -clock clk [remove_from_collection [all_inputs]  {clk}]  
-#@ set_input_delay  -min 0.0   -clock clk [remove_from_collection [all_inputs]  {clk}] 
-#@ 
-#@ set_output_delay -max 1.0   -clock clk [all_outputs]
-#@ set_output_delay -min 0.0   -clock clk [all_outputs] 
-#@ 
-#@ set_load         0.01  [all_outputs]
-#@ set_drive        0.1   [all_inputs]
-#@ 
-#@ set_operating_conditions -max_library slow -max slow
-#@ 
-#@ set_max_fanout 10 [all_inputs]
-#@ 
-#@ 
-#@ # -- End source IOTDF_DC.sdc
-
-#@ 
-#@ #Synthesis all design
-#@ compile -map_effort high -area_effort high
-#@ compile -map_effort high -area_effort high -inc
-#@ 
-#@ write -format ddc     -hierarchy -output "IOTDF_syn.ddc"
-#@ write_sdf IOTDF_syn.sdf
-#@ write_file -format verilog -hierarchy -output IOTDF_syn.v
-#@ report_area > area.log
-#@ report_timing > timing.log
-#@ report_qor   >  IOTDF_syn.qor
-#@ 
-#@ # -- End source DC_syn.tcl
 
 exit

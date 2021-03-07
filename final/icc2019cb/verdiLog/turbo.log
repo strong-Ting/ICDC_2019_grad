@@ -1,3 +1,2 @@
-Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/Novas testfixture.v IOTDF.v -ssf IOTDF_F1.fsdb
+Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/Novas testfixture.v IOTDF.v -ssf IOTDF_F5.fsdb
 uname(Linux dics03.ee.yuntech.edu.tw 3.10.0-1160.15.2.el7.x86_64 #1 SMP Wed Feb 3 15:06:38 UTC 2021 x86_64)
-au time 30.731258 4.200068 0.576188 delta 248467456 248467456 total 727814144 727814144

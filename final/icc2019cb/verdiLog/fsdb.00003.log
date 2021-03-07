@@ -1,7 +1,7 @@
 #######################################################################################
 # fsdb.xxxxx.log : log primitive debug message of FSDB Reader
 # This is for R&D to analyze when there are issues happening when FSDB reading
-# The corresponding FSDB file is /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F1.fsdb
+# The corresponding FSDB file is /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F3.fsdb
 #######################################################################################
 [BASIC]Reader version : ncsim 15.20-s039
 [BASIC]simulator version : ncsim 15.20-s039

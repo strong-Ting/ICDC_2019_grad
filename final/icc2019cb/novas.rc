@@ -221,6 +221,9 @@ Selection-LineColor = ID_BLUE2
 Selection-LineWidth = 1
 [FSM_Dlg-Print]
 Orientation = Landscape
+[FileBrowser]
+nWaveOpenFsdbDirHistory = "\"/home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F2.fsdb\""
+nWaveRestoreRCDirHistory = "\"/home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/signal.rc\""
 [Form]
 version = Verdi_R-2020.12
 [General]
@@ -373,7 +376,13 @@ saveWaveformStat = TRUE
 savePropStat = FALSE
 savePropDtl = TRUE
 [QtDialog]
+openFileDlg = 1907,192,602,483
+restoreSigDlg = 1932,214,551,438
 QwWarnMsgDlg = 458,247,600,250
+schExtrFSM = 624,371,287,105
+saveSigDlg = 492,230,551,386
+qWaveSignalDialog = 1808,194,800,479
+unknownSave = 1977,311,461,245
 QwUserAskDlg = 778,397,324,134
 [Relationship]
 hideRecursiceNode = FALSE
@@ -659,34 +668,34 @@ isOneSearchVisible = TRUE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
+name = Severity
+width = 60
+visualIndex = 1
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
 name = Code
 width = 60
 visualIndex = 2
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = Type
 width = 60
 visualIndex = 3
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
 name = Time
 width = 60
 visualIndex = 0
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
 name = Message
 width = 2000
 visualIndex = 4
 isHidden = FALSE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
-name = Severity
-width = 60
-visualIndex = 1
-isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [Vi]
 ViFont = "Clean 14"
@@ -826,8 +835,8 @@ connectTBrowserInContainer = TRUE
 autoSyncCursorMarker = FALSE
 autoSyncHorizontalRange = FALSE
 autoSyncVerticalScroll = FALSE
-getSignalForm = 0 0 800 479 100 30 100 30
-viewPort = 0 25 900 256 100 65
+getSignalForm = 1808 194 800 479 245 381 505 183
+viewPort = 0 25 900 230 191 65
 legendBackground = -c ID_BLACK
 valueBackground = -c ID_BLACK
 curveBackground = -c ID_BLACK
@@ -990,7 +999,11 @@ printBasic = 1 0 0 FALSE FALSE
 printDest = -printer {}
 printSignature = {%f %h %t} {}
 curveWindow_Drag&Drop_Mode = TRUE
-RecentFile1 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F1.fsdb\""
+RecentFile1 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F4.fsdb\""
+RecentFile2 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/signal.rc\""
+RecentFile3 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F1.fsdb\""
+RecentFile4 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F3.fsdb\""
+RecentFile5 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F2.fsdb\""
 open_file_time_range = FALSE
 legend_window_font = -f COURIER12 -c ID_CYAN5
 value_window_font = -f COURIER12 -c ID_CYAN5
@@ -1194,7 +1207,7 @@ plan_fillColor_error = red
 plan_fillColor_invalid = #F0DCDB
 plan_fillColor_subplan = lightGray
 [schematics]
-viewport = 178 262 638 516
+viewport = 0 25 1536 673
 schBackgroundColor = black lineSolid
 schBodyColor = orange6 lineSolid
 schAsmBodyColor = blue7 lineSolid
@@ -1301,7 +1314,7 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 25 900 256 100 65
+viewPort = 0 25 900 230 191 65
 [wave.1]
 viewPort = 127 219 960 332 100 65
 [wave.2]

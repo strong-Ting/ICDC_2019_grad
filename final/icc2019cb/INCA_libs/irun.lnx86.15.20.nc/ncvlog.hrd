@@ -2,9 +2,5 @@
 // File created by:  ncverilog
 // Do not modify this file
 //
--VFILE
-/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v
 -DEFINE
-F2
--DEFINE
-SDF
+F5

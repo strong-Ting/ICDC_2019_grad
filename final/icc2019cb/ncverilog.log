@@ -1,729 +1,35 @@
 ncverilog: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
-TOOL:	ncverilog	15.20-s039: Started on Mar 07, 2021 at 00:20:59 CST
+TOOL:	ncverilog	15.20-s039: Started on Mar 07, 2021 at 17:40:38 CST
 ncverilog
 	testfixture.v
-	IOTDF_syn.v
-	-v
-	/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v
-	+define+F2+SDF
+	IOTDF.v
+	+define+F5
 	+access+r
-file: testfixture.v
-	module worklib.test:v
-		errors: 0, warnings: 0
-file: IOTDF_syn.v
+Recompiling... reason: file './IOTDF.v' is newer than expected.
+	expected: Sun Mar  7 17:33:12 2021
+	actual:   Sun Mar  7 17:40:34 2021
+file: IOTDF.v
 	module worklib.IOTDF:v
 		errors: 0, warnings: 0
-		Caching library 'tsmc13' ....... Done
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
-  DFFRX1 \cs_reg[1]  ( .D(ns[1]), .CK(clk), .RN(n776), .Q(n676) );
-                   |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,94|19): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): QN
-
-  DFFRX1 \cs_reg[0]  ( .D(ns[0]), .CK(clk), .RN(n776), .QN(n416) );
-                   |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,97|19): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[15][7]  ( .D(n559), .CK(clk), .RN(n785), .QN(n393) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,98|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[15][6]  ( .D(n558), .CK(clk), .RN(n786), .QN(n395) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,99|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[15][5]  ( .D(n557), .CK(clk), .RN(n786), .QN(n397) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,100|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[15][4]  ( .D(n556), .CK(clk), .RN(n786), .QN(n399) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,101|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[15][3]  ( .D(n555), .CK(clk), .RN(n786), .QN(n401) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,102|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[15][2]  ( .D(n554), .CK(clk), .RN(n786), .QN(n403) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,103|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[15][1]  ( .D(n553), .CK(clk), .RN(n786), .QN(n405) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,104|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[15][0]  ( .D(n552), .CK(clk), .RN(n786), .QN(n407) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,105|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[1][7]  ( .D(n671), .CK(clk), .RN(n776), .QN(n169) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,106|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[1][6]  ( .D(n670), .CK(clk), .RN(n776), .QN(n171) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,107|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[1][5]  ( .D(n669), .CK(clk), .RN(n776), .QN(n173) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,108|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[1][4]  ( .D(n668), .CK(clk), .RN(n776), .QN(n175) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,109|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[1][3]  ( .D(n667), .CK(clk), .RN(n776), .QN(n177) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,110|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[1][2]  ( .D(n666), .CK(clk), .RN(n777), .QN(n179) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,111|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[1][1]  ( .D(n665), .CK(clk), .RN(n777), .QN(n181) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,112|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[1][0]  ( .D(n664), .CK(clk), .RN(n777), .QN(n183) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,113|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[2][7]  ( .D(n663), .CK(clk), .RN(n777), .QN(n185) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,114|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[2][6]  ( .D(n662), .CK(clk), .RN(n777), .QN(n187) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,115|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[2][5]  ( .D(n661), .CK(clk), .RN(n777), .QN(n189) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,116|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[2][4]  ( .D(n660), .CK(clk), .RN(n777), .QN(n191) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,117|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[2][3]  ( .D(n659), .CK(clk), .RN(n777), .QN(n193) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,118|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[2][2]  ( .D(n658), .CK(clk), .RN(n777), .QN(n195) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,119|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[2][1]  ( .D(n657), .CK(clk), .RN(n777), .QN(n197) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,120|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[2][0]  ( .D(n656), .CK(clk), .RN(n777), .QN(n199) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,121|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[3][7]  ( .D(n655), .CK(clk), .RN(n777), .QN(n201) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,122|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[3][6]  ( .D(n654), .CK(clk), .RN(n778), .QN(n203) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,123|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[3][5]  ( .D(n653), .CK(clk), .RN(n778), .QN(n205) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,124|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[3][4]  ( .D(n652), .CK(clk), .RN(n778), .QN(n207) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,125|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[3][3]  ( .D(n651), .CK(clk), .RN(n778), .QN(n209) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,126|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[3][2]  ( .D(n650), .CK(clk), .RN(n778), .QN(n211) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,127|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[3][1]  ( .D(n649), .CK(clk), .RN(n778), .QN(n213) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,128|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[3][0]  ( .D(n648), .CK(clk), .RN(n778), .QN(n215) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,129|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[4][7]  ( .D(n647), .CK(clk), .RN(n778), .QN(n217) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,130|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[4][6]  ( .D(n646), .CK(clk), .RN(n778), .QN(n219) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,131|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[4][5]  ( .D(n645), .CK(clk), .RN(n778), .QN(n221) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,132|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[4][4]  ( .D(n644), .CK(clk), .RN(n778), .QN(n223) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,133|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[4][3]  ( .D(n643), .CK(clk), .RN(n778), .QN(n225) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,134|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[4][2]  ( .D(n642), .CK(clk), .RN(n779), .QN(n227) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,135|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[4][1]  ( .D(n641), .CK(clk), .RN(n779), .QN(n229) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,136|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[4][0]  ( .D(n640), .CK(clk), .RN(n779), .QN(n231) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,137|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[5][7]  ( .D(n639), .CK(clk), .RN(n779), .QN(n233) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,138|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[5][6]  ( .D(n638), .CK(clk), .RN(n779), .QN(n235) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,139|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[5][5]  ( .D(n637), .CK(clk), .RN(n779), .QN(n237) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,140|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[5][4]  ( .D(n636), .CK(clk), .RN(n779), .QN(n239) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,141|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[5][3]  ( .D(n635), .CK(clk), .RN(n779), .QN(n241) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,142|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[5][2]  ( .D(n634), .CK(clk), .RN(n779), .QN(n243) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,143|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[5][1]  ( .D(n633), .CK(clk), .RN(n779), .QN(n245) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,144|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[5][0]  ( .D(n632), .CK(clk), .RN(n779), .QN(n247) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,145|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[6][7]  ( .D(n631), .CK(clk), .RN(n779), .QN(n249) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,146|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[6][6]  ( .D(n630), .CK(clk), .RN(n780), .QN(n251) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,147|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[6][5]  ( .D(n629), .CK(clk), .RN(n780), .QN(n253) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,148|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[6][4]  ( .D(n628), .CK(clk), .RN(n780), .QN(n255) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,149|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[6][3]  ( .D(n627), .CK(clk), .RN(n780), .QN(n257) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,150|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[6][2]  ( .D(n626), .CK(clk), .RN(n780), .QN(n259) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,151|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[6][1]  ( .D(n625), .CK(clk), .RN(n780), .QN(n261) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,152|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[6][0]  ( .D(n624), .CK(clk), .RN(n780), .QN(n263) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,153|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[7][7]  ( .D(n623), .CK(clk), .RN(n780), .QN(n265) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,154|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[7][6]  ( .D(n622), .CK(clk), .RN(n780), .QN(n267) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,155|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[7][5]  ( .D(n621), .CK(clk), .RN(n780), .QN(n269) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,156|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[7][4]  ( .D(n620), .CK(clk), .RN(n780), .QN(n271) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,157|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[7][3]  ( .D(n619), .CK(clk), .RN(n780), .QN(n273) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,158|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[7][2]  ( .D(n618), .CK(clk), .RN(n781), .QN(n275) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,159|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[7][1]  ( .D(n617), .CK(clk), .RN(n781), .QN(n277) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,160|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[7][0]  ( .D(n616), .CK(clk), .RN(n781), .QN(n279) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,161|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[8][7]  ( .D(n615), .CK(clk), .RN(n781), .QN(n281) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,162|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[8][6]  ( .D(n614), .CK(clk), .RN(n781), .QN(n283) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,163|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[8][5]  ( .D(n613), .CK(clk), .RN(n781), .QN(n285) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,164|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[8][4]  ( .D(n612), .CK(clk), .RN(n781), .QN(n287) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,165|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[8][3]  ( .D(n611), .CK(clk), .RN(n781), .QN(n289) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,166|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[8][2]  ( .D(n610), .CK(clk), .RN(n781), .QN(n291) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,167|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[8][1]  ( .D(n609), .CK(clk), .RN(n781), .QN(n293) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,168|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[8][0]  ( .D(n608), .CK(clk), .RN(n781), .QN(n295) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,169|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[9][7]  ( .D(n607), .CK(clk), .RN(n781), .QN(n297) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,170|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[9][6]  ( .D(n606), .CK(clk), .RN(n782), .QN(n299) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,171|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[9][5]  ( .D(n605), .CK(clk), .RN(n782), .QN(n301) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,172|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[9][4]  ( .D(n604), .CK(clk), .RN(n782), .QN(n303) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,173|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[9][3]  ( .D(n603), .CK(clk), .RN(n782), .QN(n305) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,174|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[9][2]  ( .D(n602), .CK(clk), .RN(n782), .QN(n307) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,175|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[9][1]  ( .D(n601), .CK(clk), .RN(n782), .QN(n309) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,176|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[9][0]  ( .D(n600), .CK(clk), .RN(n782), .QN(n311) );
-                            |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,177|28): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[10][7]  ( .D(n599), .CK(clk), .RN(n782), .QN(n313) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,178|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[10][6]  ( .D(n598), .CK(clk), .RN(n782), .QN(n315) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,179|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[10][5]  ( .D(n597), .CK(clk), .RN(n782), .QN(n317) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,180|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[10][4]  ( .D(n596), .CK(clk), .RN(n782), .QN(n319) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,181|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[10][3]  ( .D(n595), .CK(clk), .RN(n782), .QN(n321) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,182|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[10][2]  ( .D(n594), .CK(clk), .RN(n783), .QN(n323) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,183|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[10][1]  ( .D(n593), .CK(clk), .RN(n783), .QN(n325) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,184|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[10][0]  ( .D(n592), .CK(clk), .RN(n783), .QN(n327) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,185|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[11][7]  ( .D(n591), .CK(clk), .RN(n783), .QN(n329) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,186|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[11][6]  ( .D(n590), .CK(clk), .RN(n783), .QN(n331) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,187|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[11][5]  ( .D(n589), .CK(clk), .RN(n783), .QN(n333) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,188|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[11][4]  ( .D(n588), .CK(clk), .RN(n783), .QN(n335) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,189|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[11][3]  ( .D(n587), .CK(clk), .RN(n783), .QN(n337) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,190|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[11][2]  ( .D(n586), .CK(clk), .RN(n783), .QN(n339) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,191|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[11][1]  ( .D(n585), .CK(clk), .RN(n783), .QN(n341) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,192|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[11][0]  ( .D(n584), .CK(clk), .RN(n783), .QN(n343) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,193|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[12][7]  ( .D(n583), .CK(clk), .RN(n783), .QN(n345) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,194|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[12][6]  ( .D(n582), .CK(clk), .RN(n784), .QN(n347) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,195|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[12][5]  ( .D(n581), .CK(clk), .RN(n784), .QN(n349) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,196|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[12][4]  ( .D(n580), .CK(clk), .RN(n784), .QN(n351) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,197|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[12][3]  ( .D(n579), .CK(clk), .RN(n784), .QN(n353) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,198|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[12][2]  ( .D(n578), .CK(clk), .RN(n784), .QN(n355) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,199|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[12][1]  ( .D(n577), .CK(clk), .RN(n784), .QN(n357) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,200|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[12][0]  ( .D(n576), .CK(clk), .RN(n784), .QN(n359) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,201|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[13][7]  ( .D(n575), .CK(clk), .RN(n784), .QN(n361) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,202|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[13][6]  ( .D(n574), .CK(clk), .RN(n784), .QN(n363) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,203|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[13][5]  ( .D(n573), .CK(clk), .RN(n784), .QN(n365) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,204|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[13][4]  ( .D(n572), .CK(clk), .RN(n784), .QN(n367) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,205|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[13][3]  ( .D(n571), .CK(clk), .RN(n784), .QN(n369) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,206|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[13][2]  ( .D(n570), .CK(clk), .RN(n785), .QN(n371) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,207|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[13][1]  ( .D(n569), .CK(clk), .RN(n785), .QN(n373) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,208|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[13][0]  ( .D(n568), .CK(clk), .RN(n785), .QN(n375) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,209|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[14][7]  ( .D(n567), .CK(clk), .RN(n785), .QN(n377) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,210|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[14][6]  ( .D(n566), .CK(clk), .RN(n785), .QN(n379) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,211|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[14][5]  ( .D(n565), .CK(clk), .RN(n785), .QN(n381) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,212|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[14][4]  ( .D(n564), .CK(clk), .RN(n785), .QN(n383) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,213|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[14][3]  ( .D(n563), .CK(clk), .RN(n785), .QN(n385) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,214|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[14][2]  ( .D(n562), .CK(clk), .RN(n785), .QN(n387) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,215|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[14][1]  ( .D(n561), .CK(clk), .RN(n785), .QN(n389) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,216|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \iot_in_0_reg[14][0]  ( .D(n560), .CK(clk), .RN(n785), .QN(n391) );
-                             |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,217|29): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 cmp_flag_reg ( .D(n672), .CK(clk), .RN(n776), .QN(n160) );
-                    |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,218|20): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 even_flag_reg ( .D(n673), .CK(clk), .RN(n776), .Q(n906) );
-                     |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,219|21): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): QN
-
-  DFFRX1 \cnt_round_reg[0]  ( .D(n413), .CK(clk), .RN(n776), .QN(n543) );
-                          |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,260|26): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \cnt_round_reg[2]  ( .D(n411), .CK(clk), .RN(n776), .QN(n541) );
-                          |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,261|26): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 \cnt_round_reg[1]  ( .D(n412), .CK(clk), .RN(n776), .QN(n542) );
-                          |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,262|26): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): Q
-
-  DFFRX1 valid_reg ( .D(n674), .CK(clk), .RN(n797), .Q(valid) );
-                 |
-ncelab: *W,CUVWSP (./IOTDF_syn.v,479|17): 1 output port was not connected:
-ncelab: (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,18240): QN
-
-	Reading SDF file from location "./IOTDF_syn.sdf"
-	Annotating SDF timing data:
-		Compiled SDF file:     IOTDF_syn.sdf.X
-		Log file:              
-		Backannotation scope:  test.u_IOTDF
-		Configuration file:    
-		MTM control:           
-		Scale factors:         
-		Scale type:            
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_IOTDF.U992 of module XOR2X1 <./IOTDF_syn.sdf, line 3036>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_IOTDF.U992 of module XOR2X1 <./IOTDF_syn.sdf, line 3037>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_IOTDF.U992 of module XOR2X1 <./IOTDF_syn.sdf, line 3040>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_IOTDF.U992 of module XOR2X1 <./IOTDF_syn.sdf, line 3041>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_IOTDF.U965 of module XOR2X1 <./IOTDF_syn.sdf, line 3334>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_IOTDF.U965 of module XOR2X1 <./IOTDF_syn.sdf, line 3335>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_IOTDF.U965 of module XOR2X1 <./IOTDF_syn.sdf, line 3338>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_IOTDF.U965 of module XOR2X1 <./IOTDF_syn.sdf, line 3339>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_IOTDF.U861 of module XOR2X1 <./IOTDF_syn.sdf, line 4589>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_IOTDF.U861 of module XOR2X1 <./IOTDF_syn.sdf, line 4590>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_IOTDF.U861 of module XOR2X1 <./IOTDF_syn.sdf, line 4593>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_IOTDF.U861 of module XOR2X1 <./IOTDF_syn.sdf, line 4594>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_IOTDF.U856 of module XNOR2X1 <./IOTDF_syn.sdf, line 4649>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_IOTDF.U856 of module XNOR2X1 <./IOTDF_syn.sdf, line 4650>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_IOTDF.U856 of module XNOR2X1 <./IOTDF_syn.sdf, line 4653>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_IOTDF.U856 of module XNOR2X1 <./IOTDF_syn.sdf, line 4654>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_IOTDF.U851 of module XNOR2X1 <./IOTDF_syn.sdf, line 4705>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_IOTDF.U851 of module XNOR2X1 <./IOTDF_syn.sdf, line 4706>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_IOTDF.U851 of module XNOR2X1 <./IOTDF_syn.sdf, line 4709>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_IOTDF.U851 of module XNOR2X1 <./IOTDF_syn.sdf, line 4710>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge A) Y) of instance test.u_IOTDF.U850 of module XNOR2X1 <./IOTDF_syn.sdf, line 4721>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge A) Y) of instance test.u_IOTDF.U850 of module XNOR2X1 <./IOTDF_syn.sdf, line 4722>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (posedge B) Y) of instance test.u_IOTDF.U850 of module XNOR2X1 <./IOTDF_syn.sdf, line 4725>.
-ncelab: *W,SDFNEP: Unable to annotate to non-existent path (IOPATH (negedge B) Y) of instance test.u_IOTDF.U850 of module XNOR2X1 <./IOTDF_syn.sdf, line 4726>.
-	Annotation completed with 0 Errors and 24 Warnings
-    $setuphold(posedge GN, posedge SN, tsetup$SN$GN,thold$SN$GN, NOTIFIER);
-             |
-ncelab: *W,SANGL2 (/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v,27160|13): The sum of both limits in $setuphold or $recrem is less than the tolerance value: the negative limit will be set to zero for instance test.u_IOTDF.\ns_reg[0] .
-	SDF statistics: No. of Pathdelays = 3172  Annotated = 100.00% -- No. of Tchecks = 1572  Annotated = 99.81% 
-				        Total 	   Annotated	  Percentage
-		 Path Delays	        3172	        3172	      100.00
-		       $hold	           2	           0	        0.00
-		      $width	         784	         784	      100.00
-		  $setuphold	         786	         785	       99.87
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.IOTDF:v <0x7bfe48bf>
-			streams:   1, words:   107
-		worklib.test:v <0x69562689>
-			streams:  12, words: 16466
+		worklib.IOTDF:v <0x4b31581e>
+			streams:  34, words: 31180
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
-		                    Instances  Unique
-		Modules:                  853      38
-		UDPs:                     262       2
-		Primitives:              2756       8
-		Timing outputs:          1113      20
-		Registers:                290      34
-		Scalar wires:            1384       -
-		Expanded wires:            11       2
-		Always blocks:              3       3
-		Initial blocks:             8       8
-		Cont. assignments:          1       1
-		Pseudo assignments:         1       1
-		Timing checks:           2358     296
-		Interconnect:            2893       -
-		Delayed tcheck signals:   786     286
-		Simulation timescale:     1ps
+		                  Instances  Unique
+		Modules:                  2       2
+		Registers:               43      43
+		Scalar wires:             5       -
+		Vectored wires:           5       -
+		Always blocks:            9       9
+		Initial blocks:           7       7
+		Cont. assignments:        2       2
+		Pseudo assignments:       1       1
+		Simulation timescale:  10ps
 	Writing initial simulation snapshot: worklib.test:v
 Loading snapshot worklib.test:v .................... Done
 *Verdi* Loading libsscore_ius152.so
@@ -732,7 +38,7 @@ ncsim> run
 FSDB Dumper for IUS, Release Verdi_R-2020.12, Linux, 11/19/2020
 (C) 1996 - 2020 by Synopsys, Inc.
 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
-*Verdi* : Create FSDB file 'IOTDF_F2.fsdb'
+*Verdi* : Create FSDB file 'IOTDF_F5.fsdb'
 *Verdi* : Begin traversing the scopes, layer (0).
 *Verdi* : End of traversing.
 *Verdi* : Begin traversing the MDAs, layer (0).
@@ -755,6 +61,67 @@ P08:  ** Correct!! **
 P09:  ** Correct!! ** 
 P10:  ** Correct!! ** 
 P11:  ** Correct!! ** 
+P12:  ** Correct!! ** 
+P13:  ** Correct!! ** 
+P14:  ** Correct!! ** 
+P15:  ** Correct!! ** 
+P16:  ** Correct!! ** 
+P17:  ** Correct!! ** 
+P18:  ** Correct!! ** 
+P19:  ** Correct!! ** 
+P20:  ** Correct!! ** 
+P21:  ** Correct!! ** 
+P22:  ** Correct!! ** 
+P23:  ** Correct!! ** 
+P24:  ** Correct!! ** 
+P25:  ** Correct!! ** 
+P26:  ** Correct!! ** 
+P27:  ** Correct!! ** 
+P28:  ** Correct!! ** 
+P29:  ** Correct!! ** 
+P30:  ** Correct!! ** 
+P31:  ** Correct!! ** 
+P32:  ** Correct!! ** 
+P33:  ** Correct!! ** 
+P34:  ** Correct!! ** 
+P35:  ** Correct!! ** 
+P36:  ** Correct!! ** 
+P37:  ** Correct!! ** 
+P38:  ** Correct!! ** 
+P39:  ** Correct!! ** 
+P40:  ** Correct!! ** 
+P41:  ** Correct!! ** 
+P42:  ** Correct!! ** 
+P43:  ** Correct!! ** 
+P44:  ** Correct!! ** 
+P45:  ** Correct!! ** 
+P46:  ** Correct!! ** 
+P47:  ** Correct!! ** 
+P48:  ** Correct!! ** 
+P49:  ** Correct!! ** 
+P50:  ** Correct!! ** 
+P51:  ** Correct!! ** 
+P52:  ** Correct!! ** 
+P53:  ** Correct!! ** 
+P54:  ** Correct!! ** 
+P55:  ** Correct!! ** 
+P56:  ** Correct!! ** 
+P57:  ** Correct!! ** 
+P58:  ** Correct!! ** 
+P59:  ** Correct!! ** 
+P60:  ** Correct!! ** 
+P61:  ** Correct!! ** 
+P62:  ** Correct!! ** 
+P63:  ** Correct!! ** 
+P64:  ** Correct!! ** 
+P65:  ** Correct!! ** 
+P66:  ** Correct!! ** 
+P67:  ** Correct!! ** 
+P68:  ** Correct!! ** 
+P69:  ** Correct!! ** 
+P70:  ** Correct!! ** 
+P71:  ** Correct!! ** 
+P72:  ** Correct!! ** 
 
 -----------------------------------------------------
 
@@ -765,4 +132,4 @@ Congratulations! All data have been generated successfully!
 Simulation complete via $finish(1) at time 15400 NS + 0
 ./testfixture.v:232       #(`CYCLE/2); $finish;
 ncsim> exit
-TOOL:	ncverilog	15.20-s039: Exiting on Mar 07, 2021 at 00:21:06 CST  (total: 00:00:07)
+TOOL:	ncverilog	15.20-s039: Exiting on Mar 07, 2021 at 17:40:55 CST  (total: 00:00:17)

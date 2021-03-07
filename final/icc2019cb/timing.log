@@ -6,15 +6,14 @@ Report : timing
         -max_paths 1
 Design : IOTDF
 Version: P-2019.03
-Date   : Sun Mar  7 00:19:21 2021
+Date   : Sun Mar  7 16:19:31 2021
 ****************************************
 
 Operating Conditions: slow   Library: slow
 Wire Load Model Mode: top
 
-  Startpoint: cnt_record_reg[0]
-              (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: even_flag_reg
+  Startpoint: iot_in[2] (input port clocked by clk)
+  Endpoint: add_buff_reg[130]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -23,41 +22,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              1.00       1.00
-  cnt_record_reg[0]/CK (DFFSX1)            0.00       1.00 r
-  cnt_record_reg[0]/Q (DFFSX1)             0.56       1.56 r
-  U577/Y (NOR2X1)                          0.20       1.76 f
-  U875/Y (AO22X1)                          0.36       2.11 f
-  U876/Y (AOI221XL)                        0.18       2.29 r
-  U877/Y (OA22X1)                          0.23       2.52 r
-  U878/Y (OAI221XL)                        0.18       2.70 f
-  U953/Y (NAND2BX1)                        0.24       2.94 f
-  U957/Y (OA21XL)                          0.27       3.21 f
-  U958/Y (AOI211X1)                        0.17       3.38 r
-  U526/Y (CLKINVX1)                        0.08       3.46 f
-  U961/Y (AOI31X1)                         0.12       3.58 r
-  U525/Y (CLKINVX1)                        0.07       3.66 f
-  U963/Y (OAI211X1)                        0.18       3.83 r
-  U966/Y (AOI32X1)                         0.14       3.97 f
-  U579/Y (CLKINVX1)                        0.06       4.03 r
-  U968/Y (AO21X1)                          0.17       4.19 r
-  U518/Y (AOI22X1)                         0.06       4.25 f
-  U517/Y (OAI31XL)                         0.31       4.56 r
-  U522/Y (OAI21XL)                         0.15       4.71 f
-  U521/Y (OAI2BB2XL)                       0.17       4.88 r
-  even_flag_reg/D (DFFRX1)                 0.00       4.88 r
-  data arrival time                                   4.88
+  input external delay                     1.00       2.00 r
+  iot_in[2] (in)                           0.00       2.00 r
+  add_137/B[2] (IOTDF_DW01_add_1)          0.00       2.00 r
+  add_137/U1228/Y (NAND2X1)                0.05       2.05 f
+  add_137/U1255/Y (OAI21XL)                0.18       2.23 r
+  add_137/U1212/Y (AOI21XL)                0.09       2.32 f
+  add_137/U1221/Y (OAI21XL)                0.24       2.57 r
+  add_137/U1628/Y (AOI21X1)                0.15       2.71 f
+  add_137/U1261/Y (CLKINVX2)               0.05       2.77 r
+  add_137/U1593/Y (NAND2X1)                0.05       2.82 f
+  add_137/U1225/Y (NAND2X1)                0.08       2.90 r
+  add_137/U1709/Y (AOI21X1)                0.10       3.00 f
+  add_137/U1224/Y (OAI21XL)                0.26       3.26 r
+  add_137/U1237/Y (AOI21X1)                0.15       3.40 f
+  add_137/U1264/Y (CLKINVX1)               0.07       3.47 r
+  add_137/U1262/Y (NAND2X1)                0.05       3.52 f
+  add_137/U1263/Y (NAND2X1)                0.09       3.61 r
+  add_137/U1285/Y (AOI21X1)                0.09       3.70 f
+  add_137/U1697/Y (OAI21XL)                0.26       3.96 r
+  add_137/U1236/Y (AOI21X1)                0.14       4.10 f
+  add_137/U1231/Y (OAI21XL)                0.24       4.34 r
+  add_137/U1328/Y (AOI21XL)                0.16       4.50 f
+  add_137/U1698/Y (OAI21XL)                0.25       4.75 r
+  add_137/U1329/Y (AOI21XL)                0.16       4.90 f
+  add_137/U1699/Y (OAI21XL)                0.25       5.15 r
+  add_137/U1330/Y (AOI21XL)                0.16       5.31 f
+  add_137/U1700/Y (OAI21XL)                0.25       5.55 r
+  add_137/U1331/Y (AOI21XL)                0.16       5.71 f
+  add_137/U1701/Y (OAI21XL)                0.25       5.96 r
+  add_137/U1332/Y (AOI21XL)                0.16       6.11 f
+  add_137/U1702/Y (OAI21XL)                0.25       6.36 r
+  add_137/U1333/Y (AOI21XL)                0.16       6.52 f
+  add_137/U1703/Y (OAI21XL)                0.25       6.76 r
+  add_137/U1334/Y (AOI21XL)                0.16       6.92 f
+  add_137/U1704/Y (OAI21XL)                0.25       7.17 r
+  add_137/U1335/Y (AOI21XL)                0.16       7.32 f
+  add_137/U1705/Y (OAI21XL)                0.25       7.57 r
+  add_137/U1336/Y (AOI21XL)                0.16       7.73 f
+  add_137/U1706/Y (OAI21XL)                0.25       7.97 r
+  add_137/U1337/Y (AOI21XL)                0.16       8.13 f
+  add_137/U1707/Y (OAI21XL)                0.25       8.38 r
+  add_137/U1338/Y (AOI21XL)                0.16       8.53 f
+  add_137/U1708/Y (OAI21XL)                0.25       8.78 r
+  add_137/U1339/Y (AOI21XL)                0.17       8.95 f
+  add_137/U1207/Y (OAI21X1)                0.18       9.13 r
+  add_137/U1238/Y (AOI21X1)                0.14       9.27 f
+  add_137/U1215/Y (OAI21X2)                0.14       9.41 r
+  add_137/U1214/Y (AO21X2)                 0.15       9.56 r
+  add_137/U1503/Y (NAND2X1)                0.05       9.61 f
+  add_137/U1504/Y (NAND2X1)                0.08       9.69 r
+  add_137/U1728/Y (AOI21X1)                0.10       9.79 f
+  add_137/U1267/Y (CLKINVX1)               0.06       9.85 r
+  add_137/U1265/Y (NAND2X1)                0.05       9.90 f
+  add_137/U1266/Y (NAND2X1)                0.08       9.98 r
+  add_137/U1287/Y (AOI21X1)                0.10      10.08 f
+  add_137/U1226/Y (NOR2X1)                 0.11      10.19 r
+  add_137/U1506/Y (NAND2XL)                0.08      10.27 f
+  add_137/U1/Y (XOR2X1)                    0.14      10.40 f
+  add_137/SUM[130] (IOTDF_DW01_add_1)      0.00      10.40 f
+  U719/Y (AO22XL)                          0.23      10.64 f
+  add_buff_reg[130]/D (DFFRX1)             0.00      10.64 f
+  data arrival time                                  10.64
 
   clock clk (rise edge)                   10.00      10.00
   clock network delay (ideal)              1.00      11.00
   clock uncertainty                       -0.10      10.90
-  even_flag_reg/CK (DFFRX1)                0.00      10.90 r
-  library setup time                      -0.24      10.66
-  data required time                                 10.66
+  add_buff_reg[130]/CK (DFFRX1)            0.00      10.90 r
+  library setup time                      -0.21      10.69
+  data required time                                 10.69
   -----------------------------------------------------------
-  data required time                                 10.66
-  data arrival time                                  -4.88
+  data required time                                 10.69
+  data arrival time                                 -10.64
   -----------------------------------------------------------
-  slack (MET)                                         5.78
+  slack (MET)                                         0.05
 
 
 1

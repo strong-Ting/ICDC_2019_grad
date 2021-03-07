@@ -25,9 +25,9 @@ fdb_proj =
 fdb_campaign = 
 fdb_tool = 
 [hb]
-postSimFile = /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F1.fsdb
+postSimFile = /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F4.fsdb
 syncTime = 0
-viewport = 500 182 900 700 0 0 230 898
+viewport = 500 182 900 700 0 0 204 898
 activeNode = "test"
 activeScope = "test"
 activeFile = "testfixture.v"
@@ -63,11 +63,11 @@ scope = test
 File = /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/testfixture.v
 Line = 13
 [nMemoryManager]
-WaveformFile = /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F1.fsdb
+WaveformFile = /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_F4.fsdb
 UserActionNum = 0
 nMemWindowNum = 0
 [wave.0]
-viewPort = 0 25 900 256 100 65
+viewPort = 0 25 900 230 191 65
 primaryWindow = TRUE
 SessionFile = /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/verdiLog/novas_autosave.ses.wave.0
 displayGrid = FALSE
