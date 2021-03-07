@@ -1,4 +1,3 @@
 1615040211 /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/testfixture.v
-1173075089 /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v
-1615105171 /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_syn.v
-1615110034 /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF.v
+1615117116 /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_syn.v
+1615117156 /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/tsmc13_neg.v

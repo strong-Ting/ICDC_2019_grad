@@ -16,7 +16,6 @@ reg [7:0] iot_out_reg [0:15];
 reg [127:0] iot_out; 
 reg [3:0] cnt_record;
 reg [2:0] cnt_round; 
-reg done;
 
 
 wire [127:0] iot_in_reg_128bits = {iot_in_reg[15],iot_in_reg[14],iot_in_reg[13],iot_in_reg[12],iot_in_reg[11],iot_in_reg[10],
@@ -89,6 +88,7 @@ end
 //buffer
 integer i;
 reg cmp_flag,less_flag,even_flag;
+reg f_round_flag; //first round flag
 reg [130:0] add_buff;
 always@(posedge clk or posedge rst) begin
     if(rst) begin
@@ -101,20 +101,33 @@ always@(posedge clk or posedge rst) begin
         even_flag <= 1'd0;
         valid <= 1'd0;
         busy <= 1'd0;
+        f_round_flag <= 1'd0;
     end
     else if(in_en == 1'd1) begin
         case(fn_sel)
         MAX: begin
             if(cnt_round == 3'd0) iot_out_reg[cnt_record] <= iot_in;
             else if(cnt_record == 4'd0) begin
-                if(cmp_flag == 1'd1) begin
-                    for(i=1;i<16;i=i+1) begin
-                        iot_out_reg[i] <= iot_in_reg[i];
+                if(even_flag == 1'd1) begin
+                    if(cmp_flag == 1'd1) begin
+                        for(i=1;i<16;i=i+1) begin
+                            iot_out_reg[i] <= iot_in_reg[i];
+                        end
+                        iot_out_reg[0] <= iot_in;
                     end
-                    iot_out_reg[0] <= iot_in;
+                    cmp_flag <= 1'd0;
+                    even_flag <= 1'd0;    
                 end
-                cmp_flag <= 1'd0;
-                even_flag <= 1'd0;
+                else begin
+                    if(iot_in > iot_out_reg[cnt_record]) begin
+                        for(i=1;i<16;i=i+1) begin
+                            iot_out_reg[i] <= iot_in_reg[i];
+                        end
+                        iot_out_reg[0] <= iot_in;
+                    end
+                    cmp_flag <= 1'd0;
+                    even_flag <= 1'd0;
+                end
             end
             else begin
                 if(iot_in > iot_out_reg[cnt_record] && even_flag == 1'd0) begin
@@ -128,19 +141,30 @@ always@(posedge clk or posedge rst) begin
 
             if(cnt_round == 3'd7 && cnt_record == 4'd0) valid <= 1'd1;
             else valid <= 1'd0;
-            
         end
         MIN: begin
             if(cnt_round == 3'd0) iot_out_reg[cnt_record] <= iot_in;
             else if(cnt_record == 4'd0) begin
-                if(cmp_flag == 1'd1) begin
-                    for(i=1;i<16;i=i+1) begin
-                        iot_out_reg[i] <= iot_in_reg[i];
+                if(even_flag == 1'd1) begin
+                    if(cmp_flag == 1'd1) begin
+                        for(i=1;i<16;i=i+1) begin
+                            iot_out_reg[i] <= iot_in_reg[i];
+                        end
+                        iot_out_reg[0] <= iot_in;
                     end
-                    iot_out_reg[0] <= iot_in;
+                    cmp_flag <= 1'd0;
+                    even_flag <= 1'd0;    
                 end
-                cmp_flag <= 1'd0;
-                even_flag <= 1'd0;
+                else begin
+                    if(iot_in < iot_out_reg[cnt_record]) begin
+                        for(i=1;i<16;i=i+1) begin
+                            iot_out_reg[i] <= iot_in_reg[i];
+                        end
+                        iot_out_reg[0] <= iot_in;
+                    end
+                    cmp_flag <= 1'd0;
+                    even_flag <= 1'd0;
+                end
             end
             else begin
                 if(iot_in < iot_out_reg[cnt_record] && even_flag == 1'd0) begin
@@ -151,6 +175,7 @@ always@(posedge clk or posedge rst) begin
 
                 iot_in_reg[cnt_record] <= iot_in;
             end 
+
             if(cnt_round == 3'd7 && cnt_record == 4'd0) valid <= 1'd1;
             else valid <= 1'd0;
         end    
@@ -194,6 +219,88 @@ always@(posedge clk or posedge rst) begin
             end
             else valid <= 1'd0;
             iot_in_reg[cnt_record] <= iot_in;
+        end
+        PEAK_MAX: begin
+            if(cnt_round == 3'd0 && f_round_flag == 1'd0) iot_out_reg[cnt_record] <= iot_in;
+            else if(cnt_record == 4'd0) begin
+                if(even_flag == 1'd1) begin
+                    if(cmp_flag == 1'd1) begin
+                        for(i=1;i<16;i=i+1) begin
+                            iot_out_reg[i] <= iot_in_reg[i];
+                        end
+                        iot_out_reg[0] <= iot_in;
+                    end
+                    cmp_flag <= 1'd0;
+                    even_flag <= 1'd0;    
+                end
+                else begin
+                    if(iot_in > iot_out_reg[cnt_record]) begin
+                        for(i=1;i<16;i=i+1) begin
+                            iot_out_reg[i] <= iot_in_reg[i];
+                        end
+                        iot_out_reg[0] <= iot_in;
+                    end
+                    cmp_flag <= 1'd0;
+                    even_flag <= 1'd0;
+                end
+            end
+            else begin
+                if(iot_in > iot_out_reg[cnt_record] && even_flag == 1'd0) begin
+                    cmp_flag <= 1'd1;
+                    even_flag <= 1'd1;
+                end 
+                else if(iot_in < iot_out_reg[cnt_record]) even_flag <= 1'd1;
+
+                iot_in_reg[cnt_record] <= iot_in;
+            end 
+
+            if(cnt_round == 3'd7 && cnt_record == 4'd0 && f_round_flag == 1'd0) begin
+                valid <= 1'd1;
+                f_round_flag <= 1'd1;
+            end
+            else if(f_round_flag == 1'd1 && cmp_flag == 1'd1 && cnt_record == 4'd0) valid <= 1'd1;
+            else valid <= 1'd0;
+        end
+        PEAK_MIN: begin
+            if(cnt_round == 3'd0 && f_round_flag == 1'd0) iot_out_reg[cnt_record] <= iot_in;
+            else if(cnt_record == 4'd0) begin
+                if(even_flag == 1'd1) begin
+                    if(cmp_flag == 1'd1) begin
+                        for(i=1;i<16;i=i+1) begin
+                            iot_out_reg[i] <= iot_in_reg[i];
+                        end
+                        iot_out_reg[0] <= iot_in;
+                    end
+                    cmp_flag <= 1'd0;
+                    even_flag <= 1'd0;    
+                end
+                else begin
+                    if(iot_in < iot_out_reg[cnt_record]) begin
+                        for(i=1;i<16;i=i+1) begin
+                            iot_out_reg[i] <= iot_in_reg[i];
+                        end
+                        iot_out_reg[0] <= iot_in;
+                    end
+                    cmp_flag <= 1'd0;
+                    even_flag <= 1'd0;
+                end
+            end
+            else begin
+                if(iot_in < iot_out_reg[cnt_record] && even_flag == 1'd0) begin
+                    cmp_flag <= 1'd1;
+                    even_flag <= 1'd1;
+                end 
+                else if(iot_in > iot_out_reg[cnt_record]) even_flag <= 1'd1;
+
+                iot_in_reg[cnt_record] <= iot_in;
+            end 
+
+            if(cnt_round == 3'd7 && cnt_record == 4'd0 && f_round_flag == 1'd0) begin
+                valid <= 1'd1;
+                f_round_flag <= 1'd1;
+            end
+            else if(f_round_flag == 1'd1 && cmp_flag == 1'd1 && cnt_record == 4'd0) valid <= 1'd1;
+            else valid <= 1'd0;
         end
         endcase
     end

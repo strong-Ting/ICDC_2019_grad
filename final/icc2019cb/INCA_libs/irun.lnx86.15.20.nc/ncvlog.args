@@ -6,9 +6,13 @@
 ./INCA_libs/irun.lnx86.15.20.nc
 -RUNMODE
 testfixture.v
-IOTDF.v
+IOTDF_syn.v
+-VFILE
+tsmc13_neg.v
 -DEFINE
-F5
+SDF
+-DEFINE
+F7
 -CDSLIB
 ./INCA_libs/irun.lnx86.15.20.nc/cdsrun.lib
 -HDLVAR

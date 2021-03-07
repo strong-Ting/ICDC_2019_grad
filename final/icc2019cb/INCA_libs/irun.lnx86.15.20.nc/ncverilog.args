@@ -3,6 +3,9 @@
 // Do not modify this file
 //
 testfixture.v
-IOTDF.v
-+define+F5
+IOTDF_syn.v
+-v
+tsmc13_neg.v
 +access+r
+-clean
++define+SDF+F7

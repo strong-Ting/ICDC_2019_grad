@@ -9,3 +9,5 @@ wvRestoreSignal -win $_nWave2 \
            -overWriteAutoAlias on -appendSignals on
 wvZoomOut -win $_nWave2
 wvZoomOut -win $_nWave2
+srcShowDefine -win $_nTrace1
+srcShowDefine -win $_nTrace1
