@@ -16,7 +16,7 @@ set_output_delay -min 0.0   -clock clk [all_outputs]
 set_load         0.01  [all_outputs]
 set_drive        0.1   [all_inputs]
 
-set_operating_conditions -max_library slow -max slow
+set_operating_conditions -max_library slow -max slow -min_library fast -min fast
 
 set_max_fanout 10 [all_inputs]
 

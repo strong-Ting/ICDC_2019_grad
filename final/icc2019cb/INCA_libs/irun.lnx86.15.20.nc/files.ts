@@ -1,3 +1,0 @@
-1615117156 /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/tsmc13_neg.v
-1615040211 /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/testfixture.v
-1615117116 /home/DICS_LAB/M10912039/CIC/CIC_2019_grad/final/icc2019cb/IOTDF_syn.v

@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-`define SDFFILE     "./IOTDF_syn.sdf"     //Modify your sdf file name
+`define SDFFILE     "./IOTDF_pr.sdf"     //Modify your sdf file name
 `define CYCLE       10                   //Modify your CYCLE 
 `define limit       100000
 `define DEL         1.0
