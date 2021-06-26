@@ -24,3 +24,9 @@ ucli.key
 */sim/*.log
 apr*
 *.vcd
+*.zip
+novas*
+BSSLib.lib++
+BSSLib.lib++/
+sim/
+doc/
